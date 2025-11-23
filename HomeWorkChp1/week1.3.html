@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Landmark Nonthaburi</title>
+    <style>
+    
+        :root {
+            --accent: #f0b67f;
+            --link: #ffd28a;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: #000;
+            
+            color: #fff;
+            font-size: 110%;
+            line-height: 1.5;
+            padding-bottom: 40px;
+        }
+
+        header {
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(20, 20, 20, 0.85));
+            padding: 18px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 30;
+        }
+
+        .top-nav {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .top-nav a {
+            color: var(--link);
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .brand {
+            text-align: center;
+            margin: 12px 0;
+        }
+
+        .brand h1 {
+            margin: 6px 0;
+            font-size: 2rem;
+            letter-spacing: 0.02em;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 18px auto;
+            padding: 0 16px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 10px;
+            margin: 12px 0 22px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+            border: 2px solid rgba(255, 255, 255, 0.06);
+        }
+
+        section.place {
+            padding: 12px;
+            margin-bottom: 18px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        section.place h2 {
+            margin: 6px 0 8px;
+            color: var(--accent);
+        }
+
+        .up {
+            text-decoration: none;
+            color: var(--link);
+            font-weight: bold;
+            margin-left: 8px;
+        }
+
+        footer {
+            margin-top: 24px;
+            text-align: center;
+            color: #ddd;
+            font-size: 0.95rem;
+        }
+
+        /* mobile tweaks */
+        @media (max-width: 520px) {
+            .gallery img {
+                height: 140px;
+            }
+
+            body {
+                font-size: 100%;
+            }
+
+            .brand h1 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-nav">
+            <a href="Home.html">หน้าแรก</a>
+            <a href="Attractions.html">สถานที่ท่องเที่ยว</a>
+            <a href="Contact.html">ติดต่อ</a>
+            <!-- Anchor links ภายในหน้า -->
+            <a href="#KohKret">เกาะเกร็ด</a>
+            <a href="#Riverside">ริมน้ำนนทบุรี</a>
+            <a href="#Wat">วัดสำคัญ</a>
+            <a href="#Market">ตลาด & อาหาร</a>
+        </div>
+        <div class="brand">
+            <h1>Landmark — จังหวัดนนทบุรี</h1>
+            <div style="color: #bbb; font-size: 0.95rem;">แหล่งท่องเที่ยวเด่น — วัฒนธรรม อาหาร และริมน้ำ</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <p>ยินดีต้อนรับสู่จังหวัดนนทบุรี — เลื่อนดูหรือใช้เมนูข้างบนเพื่อกระโดดไปยังสถานที่ต่าง ๆ</p>
+
+            <!-- gallery ตัวอย่าง 5 รูป -->
+            <div class="gallery" aria-hidden="false">
+                <img src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/59/2016/11/08042857/03-Koh-Kret.jpg"
+                    alt="เกาะเกร็ด - เครื่องปั้นดินเผา" />
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/dd/3b/7d/wat-surroundings.jpg?h=500&s=1&w=900"
+                    alt="วัดในนนทบุรี" />
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/73/f9/68/verdure.jpg?h=-1&s=1&w=1200"
+                    alt="ธรรมชาติ หนองน้ำ" />
+                <img src="https://live-less-ordinary.com/wp-content/uploads/2014/06/Boat-from-Pier-Exploring-and-Living-in-Nonthaburi-Riverside.jpg"
+                    alt="เรือริมน้ำ" />
+                <img src="https://temple-thai.com/wp-content/uploads/2020/01/wat-phai-lom-koh-kret-5.jpg"
+                    alt="วัดผายลม เกาะเกร็ด" />
+            </div>
+        </section>
+
+        <!-- เกาะเกร็ด -->
+        <section class="place" id="KohKret">
+            <h2>เกาะเกร็ด <a class="up" href="#top">⬆</a></h2>
+            <img src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/59/2016/11/08042857/03-Koh-Kret.jpg"
+                alt="เกาะเกร็ด" style="width:100%; max-height:360px; object-fit:cover; border-radius:6px;">
+            <p>เกาะเกร็ดเป็นชุมชนงานฝีมือเครื่องปั้นดินเผาที่มีชื่อเสียง สามารถเดินชมร้านค้า ชิมขนมพื้นบ้าน
+                และปั่นจักรยานรอบเกาะได้</p>
+            <ul>
+                <li>กิจกรรม: ชมเครื่องปั้นดินเผา, เรียนทำของที่ระลึก</li>
+                <li>เวลาแนะนำ: ช่วงเช้า-บ่ายต้น ๆ เพื่อหลีกเลี่ยงแดดแรง</li>
+                <li>ข้อมูลเพิ่มเติม: <a href="https://www.nonthaburi.go.th" target="_blank" rel="noopener noreferrer"
+                        style="color:var(--link)">เทศบาลนนทบุรีเมือง</a></li>
+            </ul>
+        </section>
+
+        <!-- ริมน้ำ -->
+        <section class="place" id="Riverside">
+            <h2>ริมน้ำนนทบุรี (กิจกรรมริมน้ำ) <a class="up" href="#top">⬆</a></h2>
+            <img src="https://live-less-ordinary.com/wp-content/uploads/2014/06/Boat-from-Pier-Exploring-and-Living-in-Nonthaburi-Riverside.jpg"
+                alt="ริมน้ำนนทบุรี" style="width:100%; max-height:360px; object-fit:cover; border-radius:6px;">
+            <p>ริมน้ำมีร้านอาหารและตลาดริมน้ำ เหมาะกับการนั่งชิลและชมวิวแม่น้ำเจ้าพระยา</p>
+            <ul>
+                <li>กิจกรรมยอดนิยม: ทานข้าวริมแม่น้ำ, ล่องเรือไหว้พระ</li>
+                <li>ตัวอย่างตลาด: ตลาดท่าน้ำ, ตลาดริมน้ำท้องถิ่น</li>
+            </ul>
+        </section>
+
+        <!-- วัด -->
+        <section class="place" id="Wat">
+            <h2>วัดสำคัญในนนทบุรี <a class="up" href="#top">⬆</a></h2>
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/dd/3b/7d/wat-surroundings.jpg?h=500&s=1&w=900"
+                alt="วัด" style="width:100%; max-height:360px; object-fit:cover; border-radius:6px;">
+            <p>นนทบุรีมีวัดเก่าแก่หลายแห่งที่มีสถาปัตยกรรมสวยงามและประเพณีท้องถิ่น</p>
+            <ul>
+                <li>วัดเฉลิมพระเกียรติ — ชมสถาปัตยกรรม</li>
+                <li>วัดไทร — วิวริมน้ำ</li>
+            </ul>
+        </section>
+
+        <!-- ตลาด & อาหาร -->
+        <section class="place" id="Market">
+            <h2>ตลาด & อาหารท้องถิ่น <a class="up" href="#top">⬆</a></h2>
+            <img src="https://temple-thai.com/wp-content/uploads/2020/01/wat-phai-lom-koh-kret-5.jpg" alt="ตลาด & อาหาร"
+                style="width:100%; max-height:360px; object-fit:cover; border-radius:6px;">
+            <p>ตลาดท้องถิ่นของนนทบุรีมีของกินขึ้นชื่อหลายอย่าง เช่น ก๋วยเตี๋ยว-ขนมหวานท้องถิ่น และอาหารริมน้ำ</p>
+            <ol>
+                <li>ตลาดน้ำบางแห่ง — อาหารริมทางและของฝาก</li>
+                <li>ตลาดเก่าแก่ในชุมชน — ของหวานพื้นบ้าน</li>
+            </ol>
+        </section>
+
+        <!-- ข้อมูลติดต่อสั้น (รวม Email / Tel links) -->
+        <section class="place" id="ContactShort">
+            <h2>ติดต่อ / สอบถาม <a class="up" href="#top">⬆</a></h2>
+            <ul>
+                <li>อีเมล: <a href="mailto:info@nonthaburi-example.com"
+                        style="color:var(--link)">info@nonthaburi-example.com</a></li>
+                <li>โทร: <a href="tel:+66801234567" style="color:var(--link)">+66 80 123 4567</a></li>
+                <li>ข้อมูลเพิ่มเติม: <a href="https://www.tourismthailand.org/destination/nonthaburi" target="_blank"
+                        rel="noopener noreferrer" style="color:var(--link)">Tourism Thailand: Nonthaburi</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <div>© 2025 — เว็บไซต์ตัวอย่าง จังหวัดนนทบุรี</div>
+        <div style="margin-top:8px; font-size:90%; color:#bbb;">โครงสร้างไฟล์แนะนำ:
+            <code>nonthaburi/ Home.html, Attractions.html, Contact.html, css/, images/</code></div>
+    </footer>
+</body>
+
+</html>
