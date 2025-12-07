@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediaHtml</title>
+</head>
+
+<body>
+
+  <!-- 🎵 Audio -->
+  <audio controls>
+    <source src="media/sweet-life-luxury-chill-438146.mp3" type="audio/mpeg">
+    เบราว์เซอร์ของคุณไม่รองรับการเล่นไฟล์เสียง
+  </audio>
+
+  <br><br>
+
+  <!-- 🎬 Video -->
+  <video width="640" height="360" controls>
+    <source src="media/305657_small.mp4" type="video/mp4">
+    <source src="media/movie.webm" type="video/webm">
+    เบราว์เซอร์ของคุณไม่รองรับการเล่นวิดีโอ
+  </video>
+  <div>
+    <!-- ให้ Browser เลือกรูปภาพตามความเหมาะสม -->
+    <img src="media/agriculture-9939844_1920.jpg" srcset="
+            media/rock-9756732_640.jpg 640w,
+            media/rock-9756732_1280.jpg 1280w,
+            media/rock-9756732_1920.jpg 1920w
+        " sizes="(max-width: 768px) 640px,
+               (max-width: 1366px) 1280px,
+               1920px" alt="ภาพใบไม้ร่วงในฤดูใบไม้ร่วง">
+  </div>
+
+  <picture>
+    <!-- มือถือ แสดงรูปแนวตั้ง -->
+    <source media="(max-width: 768px)" srcset="media/agriculture-9939844_1920.jpg">
+
+    <!-- Desktop แสดงรูปแนวนอน -->
+    <source media="(min-width: 769px)" srcset="media/landscape-9947733_1280.jpg">
+
+    <!-- รูปสำรอง -->
+    <img src="default.jpg" alt="รูปภาพ">
+  </picture>
+
+
+
+</body>
+
+</html>
