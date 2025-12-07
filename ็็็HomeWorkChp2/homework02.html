@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: #f2f4f7;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: #ffffff;
+            padding: 25px 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 6px;
+        }
+
+        .checkbox-group,
+        .radio-group {
+            margin-bottom: 12px;
+        }
+
+        button {
+            width: 48%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            border: none;
+        }
+
+        button[type="submit"] {
+            background: #007bff;
+            color: white;
+        }
+
+        button[type="reset"] {
+            background: #6c757d;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .terms {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>ลงทะเบียนเข้าร่วมอีเวนต์</h2>
+
+        <form>
+
+            <!-- ชื่อ-นามสกุล -->
+            <label>ชื่อ - นามสกุล</label>
+            <input type="text" name="fullname" required placeholder="เช่น สมชาย ใจดี">
+
+            <!-- Email -->
+            <label>อีเมล</label>
+            <input type="email" name="email" required placeholder="example@mail.com">
+
+            <!-- เบอร์โทร -->
+            <label>เบอร์โทร</label>
+            <input type="tel" name="phone" required pattern="[0-9]{10}" maxlength="10" placeholder="กรอกตัวเลข 10 หลัก"
+                title="กรุณากรอกเบอร์โทร 10 หลัก เช่น 0912345678">
+
+            <!-- เพศ -->
+            <label>เพศ</label>
+            <div class="radio-group">
+                <input type="radio" name="gender" value="male" required> ชาย<br>
+                <input type="radio" name="gender" value="female"> หญิง<br>
+                <input type="radio" name="gender" value="other"> อื่น ๆ
+            </div>
+
+            <!-- ช่วงอายุ -->
+            <label>ช่วงอายุ</label>
+            <select name="age">
+                <option value="<18">น้อยกว่า 18</option>
+                <option value="18-25">18 - 25</option>
+                <option value="26-35">26 - 35</option>
+                <option value=">35">มากกว่า 35</option>
+            </select>
+
+            <!-- ความสนใจ -->
+            <label>ความสนใจ</label>
+            <div class="checkbox-group">
+                <input type="checkbox" name="interest" value="tech"> เทคโนโลยี<br>
+                <input type="checkbox" name="interest" value="music"> ดนตรี<br>
+                <input type="checkbox" name="interest" value="sport"> กีฬา<br>
+            </div>
+
+            <!-- ยินยอมเงื่อนไข -->
+            <div class="terms">
+                <input type="checkbox" name="agree" required>
+                ฉันยินยอมตามเงื่อนไขการเข้าร่วมงาน
+            </div>
+
+            <br>
+
+            <!-- ปุ่ม -->
+            <button type="submit">ส่งข้อมูล</button>
+            <button type="reset">ล้างข้อมูล</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

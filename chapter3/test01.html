@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <title>CSS Selectors Demo</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="main-title">Welcome to CSS</h1>
+
+        <p class="intro">This is intro paragraph.</p>
+
+        <p id="Lastname">Smith</p>
+
+        <p class="myquote" title="A beautiful day">
+            Life is beautiful
+        </p>
+
+        <span class="myquote">This span has myquote class (NOT selected by p.myquote)</span>
+
+        <div class="content">
+            <p>Paragraph inside div (direct child)</p>
+            <span>
+                <p>Nested paragraph (grandchild of div)</p>
+            </span>
+        </div>
+
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <p>Paragraph after ul (adjacent sibling)</p>
+
+        <table>
+            <tr>
+                <td>Row 1 (odd)</td>
+            </tr>
+            <tr>
+                <td>Row 2 (even)</td>
+            </tr>
+            <tr>
+                <td>Row 3 (odd)</td>
+            </tr>
+            <tr>
+                <td>Row 4 (even)</td>
+            </tr>
+        </table>
+
+        <div id="my-Address">Bangkok, Thailand</div>
+
+        <div id="business">Business Info</div>
+
+        <p lang="it">Ciao mondo!</p>
+
+        <div class="empty-box"></div>
+
+        <form>
+            <input type="checkbox" checked /> Remember me
+            <input type="text" value="Enabled input" />
+            <input type="text" disabled value="Disabled" />
+            <input type="number" min="1" max="10" value="5" />
+            <input type="number" min="1" max="10" value="15" />
+            <input type="email" value="invalid-email" />
+            <input type="email" value="test@example.com" />
+        </form>
+
+        <section>
+            <h3>Only h3 here</h3>
+            <p><b>Only bold child</b></p>
+            <p>Second p in section</p>
+        </section>
+
+        <article>
+            <p class="intro">Intro in article (also has .intro)</p>
+            <p>Last p in article</p>
+        </article>
+    </div>
+</body>
+
+</html>
