@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="card">
+        <img src="profile.jpg" alt="รูปโปรไฟล์" class="profile-img">
+        <h2 class="name">ชื่อ นาย อรรถกร บุญอารีย์</h2>
+        <p class="title">Web Developer</p>
+        <p class="bio">
+            สวัสดีครับ! ผมเป็นนักพัฒนาเว็บที่ชื่นชอบการสร้างสรรค์เว็บไซต์ที่สวยงามและใช้งานง่าย
+            มีประสบการณ์ในการทำงานกับ HTML, CSS, JavaScript และ Frameworks ต่างๆ
+        </p>
+        <div class="social">
+            <a href="#" class="btn">Facebook</a>
+            <a href="#" class="btn">Instagram</a>
+        </div>
+    </div>
+</body>
+
+</html>
+<STyle>
+    /* style.css */
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #0f0c0c;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+
+        /* จัดการ์ดให้อยู่กึ่งกลางหน้าจอ */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* ---------------------- */
+    /* Card กล่องโปรไฟล์     */
+    /* ---------------------- */
+
+    .card {
+        width: 350px;
+        /* ความกว้างตามแนวตัวอย่าง */
+        padding: 20px 30px;
+        /* padding (2 ค่า) บน-ล่าง 20px / ซ้าย-ขวา 30px */
+        margin: 0 auto;
+        /* จัดกึ่งกลางแนวนอน */
+        background: #ffffff;
+        border: 2px solid #ddd;
+        /* border ตาม box model */
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ---------------------- */
+    /* รูปโปรไฟล์             */
+    /* ---------------------- */
+
+    .profile-img {
+        width: 120px;
+        /* ขนาดตาม box model ที่นิยมใช้ */
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+
+        border: 3px solid #4c84ff;
+        margin-bottom: 20px;
+        /* margin (ด้านล่าง) */
+    }
+
+    /* ---------------------- */
+    /* ชื่อ                    */
+    /* ---------------------- */
+
+    .name {
+        font-size: 24px;
+        margin: 10px 0 5px 0;
+        /* บน 10px, ล่าง 5px */
+        color: #333;
+    }
+
+    /* ---------------------- */
+    /* ตำแหน่งงาน             */
+    /* ---------------------- */
+
+    .title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #4c84ff;
+        margin-bottom: 15px;
+    }
+
+    /* ---------------------- */
+    /* Bio                    */
+    /* ---------------------- */
+
+    .bio {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+        margin: 10px 0 20px 0;
+    }
+
+    /* ---------------------- */
+    /* ปุ่ม Social            */
+    /* ---------------------- */
+
+    .social .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        /* padding 2 ค่า */
+        margin: 5px;
+        /* margin ทุกด้าน */
+        background: #4c84ff;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: 0.2s;
+    }
+
+    .social .btn:hover {
+        background: #325fcc;
+    }
+</STyle>
