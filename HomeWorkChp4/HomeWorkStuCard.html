@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ระบบข้อมูลนักศึกษา</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Kanit", sans-serif;
+      background: linear-gradient(180deg, #f1f5f9, #e5e7eb);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+      color: #2563eb;
+    }
+
+    .students-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .student-card {
+      width: 260px;
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      position: relative;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .student-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .status-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      color: #fff;
+    }
+
+    .normal { background: #10b981; }
+    .warning { background: #f59e0b; }
+    .danger { background: #ef4444; }
+
+    .card-image {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      background: #f3f4f6;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .student-name {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .student-id {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-bottom: 10px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      margin-bottom: 5px;
+      color: #374151;
+    }
+
+    .divider {
+      height: 1px;
+      background: #e5e7eb;
+      margin: 10px 0;
+    }
+
+    .gpa {
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #2563eb;
+    }
+
+    .gpa span {
+      font-size: 0.7rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>🎓 ระบบข้อมูลนักศึกษา</h1>
+
+    <div class="students-grid">
+
+      <!-- CARD 1 -->
+      <div class="student-card">
+        <span class="status-badge normal">ปกติ</span>
+        <img class="card-image" src="https://api.dicebear.com/7.x/avataaars/svg?seed=1">
+        <div class="card-content">
+          <div class="student-name">สมชาย ใจดี</div>
+          <div class="student-id">65010001</div>
+          <div class="info-row"><span>คณะ</span><span>วิทยาศาสตร์</span></div>
+          <div class="info-row"><span>สาขา</span><span>คอมพิวเตอร์</span></div>
+          <div class="info-row"><span>ปี</span><span>2</span></div>
+          <div class="divider"></div>
+          <div class="gpa">3.45 <span>GPA</span></div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="student-card">
+        <span class="status-badge normal">ปกติ</span>
+        <img class="card-image" src="https://api.dicebear.com/7.x/avataaars/svg?seed=2">
+        <div class="card-content">
+          <div class="student-name">สุดา รักเรียน</div>
+          <div class="student-id">65010002</div>
+          <div class="info-row"><span>คณะ</span><span>วิศวกรรม</span></div>
+          <div class="info-row"><span>สาขา</span><span>ซอฟต์แวร์</span></div>
+          <div class="info-row"><span>ปี</span><span>3</span></div>
+          <div class="divider"></div>
+          <div class="gpa">3.78 <span>GPA</span></div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="student-card">
+        <span class="status-badge warning">วิทยาทัณฑ์</span>
+        <img class="card-image" src="https://api.dicebear.com/7.x/avataaars/svg?seed=3">
+        <div class="card-content">
+          <div class="student-name">วิชัย พยายาม</div>
+          <div class="student-id">65010003</div>
+          <div class="info-row"><span>คณะ</span><span>บริหาร</span></div>
+          <div class="info-row"><span>สาขา</span><span>การจัดการ</span></div>
+          <div class="info-row"><span>ปี</span><span>1</span></div>
+          <div class="divider"></div>
+          <div class="gpa">1.85 <span>GPA</span></div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="student-card">
+        <span class="status-badge normal">ปกติ</span>
+        <img class="card-image" src="https://api.dicebear.com/7.x/avataaars/svg?seed=4">
+        <div class="card-content">
+          <div class="student-name">นภา ศรีสุข</div>
+          <div class="student-id">65010004</div>
+          <div class="info-row"><span>คณะ</span><span>ศิลปศาสตร์</span></div>
+          <div class="info-row"><span>สาขา</span><span>อังกฤษ</span></div>
+          <div class="info-row"><span>ปี</span><span>4</span></div>
+          <div class="divider"></div>
+          <div class="gpa">3.92 <span>GPA</span></div>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="student-card">
+        <span class="status-badge danger">พ้นสภาพ</span>
+        <img class="card-image" src="https://api.dicebear.com/7.x/avataaars/svg?seed=5">
+        <div class="card-content">
+          <div class="student-name">ประสิทธิ์ เรียนน้อย</div>
+          <div class="student-id">65010005</div>
+          <div class="info-row"><span>คณะ</span><span>วิทยาศาสตร์</span></div>
+          <div class="info-row"><span>สาขา</span><span>คณิตศาสตร์</span></div>
+          <div class="info-row"><span>ปี</span><span>2</span></div>
+          <div class="divider"></div>
+          <div class="gpa">1.32 <span>GPA</span></div>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="student-card">
+        <span class="status-badge normal">ปกติ</span>
+        <img class="card-image" src="https://api.dicebear.com/7.x/avataaars/svg?seed=6">
+        <div class="card-content">
+          <div class="student-name">พิมพ์ชนก มั่นคง</div>
+          <div class="student-id">65010006</div>
+          <div class="info-row"><span>คณะ</span><span>พยาบาลศาสตร์</span></div>
+          <div class="info-row"><span>สาขา</span><span>การพยาบาล</span></div>
+          <div class="info-row"><span>ปี</span><span>3</span></div>
+          <div class="divider"></div>
+          <div class="gpa">3.67 <span>GPA</span></div>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="student-card">
+        <span class="status-badge warning">วิทยาทัณฑ์</span>
+        <img class="card-image" src="https://api.dicebear.com/7.x/avataaars/svg?seed=7">
+        <div class="card-content">
+          <div class="student-name">ธนา ต้องสู้</div>
+          <div class="student-id">65010007</div>
+          <div class="info-row"><span>คณะ</span><span>วิทยาศาสตร์</span></div>
+          <div class="info-row"><span>สาขา</span><span>ฟิสิกส์</span></div>
+          <div class="info-row"><span>ปี</span><span>1</span></div>
+          <div class="divider"></div>
+          <div class="gpa">1.95 <span>GPA</span></div>
+        </div>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="student-card">
+        <span class="status-badge normal">ปกติ</span>
+        <img class="card-image" src="https://api.dicebear.com/7.x/avataaars/svg?seed=8">
+        <div class="card-content">
+          <div class="student-name">อรอนงค์ เก่งกาจ</div>
+          <div class="student-id">65010008</div>
+          <div class="info-row"><span>คณะ</span><span>สถาปัตยกรรม</span></div>
+          <div class="info-row"><span>สาขา</span><span>สถาปัตยกรรมภายใน</span></div>
+          <div class="info-row"><span>ปี</span><span>2</span></div>
+          <div class="divider"></div>
+          <div class="gpa">3.56 <span>GPA</span></div>
+        </div>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="student-card">
+        <span class="status-badge normal">ปกติ</span>
+        <img class="card-image" src="https://api.dicebear.com/7.x/avataaars/svg?seed=9">
+        <div class="card-content">
+          <div class="student-name">ชัยวัฒน์ วิริยะ</div>
+          <div class="student-id">65010009</div>
+          <div class="info-row"><span>คณะ</span><span>วิศวกรรม</span></div>
+          <div class="info-row"><span>สาขา</span><span>ไฟฟ้า</span></div>
+          <div class="info-row"><span>ปี</span><span>4</span></div>
+          <div class="divider"></div>
+          <div class="gpa">3.21 <span>GPA</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

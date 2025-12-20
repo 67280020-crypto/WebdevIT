@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Listing</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            padding: 30px;
+        }
+
+        /* =======================
+       ข้อที่ 3: Container Flexbox
+    ======================= */
+        .listing-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* =======================
+       Card บ้าน
+    ======================= */
+        .house-card {
+            width: 280px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* =======================
+       ส่วนรูปภาพ (Parent)
+    ======================= */
+        .card-image {
+            position: relative;
+            /* สำคัญสำหรับ badge */
+        }
+
+        .card-image img {
+            width: 100%;
+            display: block;
+        }
+
+        /* =======================
+       Badge (ข้อที่ 2)
+    ======================= */
+        .badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ef4444;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 20px;
+        }
+
+        /* =======================
+       เนื้อหา Card
+    ======================= */
+        .card-content {
+            padding: 15px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2563eb;
+            margin-bottom: 5px;
+        }
+
+        .location {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .detail {
+            font-size: 13px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="text-align:center; margin-bottom:20px;">
+        🏠 รายการขายบ้านมือสอง
+    </h2>
+
+    <div class="listing-container">
+
+        <!-- Card ใบที่ 1 -->
+        <div class="house-card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="บ้าน">
+                <span class="badge">บ้านเดี่ยว</span>
+            </div>
+            <div class="card-content">
+                <div class="price">฿ 3,500,000</div>
+                <div class="location">บางนา, กรุงเทพฯ</div>
+                <div class="detail">3 ห้องนอน · 2 ห้องน้ำ</div>
+            </div>
+        </div>
+
+        <!-- Card ใบที่ 2 -->
+        <div class="house-card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="บ้าน">
+                <span class="badge">ทาวน์โฮม</span>
+            </div>
+            <div class="card-content">
+                <div class="price">฿ 2,890,000</div>
+                <div class="location">รังสิต, ปทุมธานี</div>
+                <div class="detail">2 ห้องนอน · 2 ห้องน้ำ</div>
+            </div>
+        </div>
+
+        <!-- Card ใบที่ 3 -->
+        <div class="house-card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" alt="บ้าน">
+                <span class="badge">คอนโด</span>
+            </div>
+            <div class="card-content">
+                <div class="price">฿ 1,950,000</div>
+                <div class="location">ลาดพร้าว, กรุงเทพฯ</div>
+                <div class="detail">1 ห้องนอน · 1 ห้องน้ำ</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
